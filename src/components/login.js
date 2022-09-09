@@ -7,9 +7,13 @@ import {makeStyles} from '@material-ui/core/styles'
 import Checkbox from '@material-ui/core/Checkbox';
 import FormControlLabel from '@material-ui/core/FormControlLabel'
 import Typography  from '@material-ui/core/Typography';
+import axios from 'axios';
+
+
 
 
 const Login = ()=>{
+
 
     const paperstyle = {
         padding : 20,
@@ -42,6 +46,8 @@ const Login = ()=>{
       }
 
       const [checked , setchecked] = React.useState(true);
+
+
     return(
         <div className="form">
             <AppBar color= "primary">
@@ -96,7 +102,9 @@ const Login = ()=>{
                                         style={buttonstyle}
                                         variant="contained" 
                                         color="secondary" 
-                                        size="large" fullWidth required> 
+                                        size="large" 
+                                        type = "submit"
+                                        fullWidth required> 
                                         Sign in
                                 </Button>
                                 <Typography>
